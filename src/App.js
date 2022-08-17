@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { StyledEngineProvider } from '@mui/material';
+import Header from './Component/Header/Header';
+import Home from './Pages/Home';
+import './App.css';
+import CryptoProject from './Pages/CryptoProject';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<StyledEngineProvider injectFirst>
+			<BrowserRouter>
+				<div className='root'>
+					<Header />
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/coin/:id' element={<CryptoProject />} />
+					</Routes>
+				</div>
+			</BrowserRouter>
+		</StyledEngineProvider>
+	);
 }
 
 export default App;

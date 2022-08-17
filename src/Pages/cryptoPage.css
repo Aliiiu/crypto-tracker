@@ -1,0 +1,67 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.sideBar {
+	width: '30%';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 25px;
+	border-right: 2px solid grey;
+}
+
+.header {
+	font-weight: 'bold';
+	margin-bottom: 20px;
+	font-family: 'Montserrat';
+}
+
+.description {
+	width: '100%';
+	font-family: 'Montserrat';
+	padding: 25px;
+	padding-bottom: 15px;
+	text-align: justify;
+}
+
+.marketData {
+	padding: 25px;
+	padding-top: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+@media only screen and (min-width: 600px) {
+	.marketData {
+		align-items: center;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.marketData {
+		/* padding-left: 0px;
+		padding-right: 0px; */
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.container {
+		flex-direction: row;
+	}
+
+	.sideBar {
+		width: 30%;
+	}
+
+	.marketData {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
