@@ -2,11 +2,12 @@ import { Typography } from '@mui/material';
 import HTMLReactParser from 'html-react-parser';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { numberWithCommas } from '../Component/Banner/Carousel';
-import CoinInfo from '../Component/CoinInfo/CoinInfo';
-import { SingleCoin } from '../config/api';
-import { CryptoCtx } from '../Context/crypto-context';
-import './cryptoPage.css';
+import { SingleCoin } from '../../config/api';
+import { CryptoCtx } from '../../Context/crypto-context';
+import { numberWithCommas } from '../../Component/Banner/Carousel';
+import CoinInfo from '../../Component/CoinInfo/CoinInfo';
+import './cryptoProject.css';
+import Loader from '../../Component/Loader/Loader';
 
 const CryptoProject = () => {
 	const { id } = useParams();
@@ -29,7 +30,7 @@ const CryptoProject = () => {
 		fetchCoin();
 	}, []);
 
-	if (!coin) return 'Loading...';
+	if (!coin) return <Loader />;
 	return (
 		<div className='container'>
 			<div className='sideBar'>

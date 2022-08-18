@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { CoinList } from '../../config/api';
 import { CryptoCtx } from '../../Context/crypto-context';
 import { numberWithCommas } from '../Banner/Carousel';
+import Loader from '../Loader/Loader';
 
 const CoinsTable = () => {
 	const [coins, setCoins] = useState([]);
@@ -79,7 +80,7 @@ const CoinsTable = () => {
 				/>
 				<TableContainer>
 					{loading ? (
-						'Loading....'
+						<Loader />
 					) : (
 						<Table>
 							<TableHead style={{ backgroundColor: '#EEBC1D' }}>

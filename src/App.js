@@ -4,7 +4,7 @@ import { StyledEngineProvider } from '@mui/material';
 import Header from './Component/Header/Header';
 import Home from './Pages/Home';
 import './App.css';
-import CryptoProject from './Pages/CryptoProject';
+import CryptoProject from './Pages/CryptoProjectPage/CryptoProject';
 
 function App() {
 	return (

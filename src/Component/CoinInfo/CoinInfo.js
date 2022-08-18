@@ -5,7 +5,8 @@ import { CircularProgress, createTheme, ThemeProvider } from '@mui/material';
 import { Line } from 'react-chartjs-2';
 import { Chart, registerables } from 'chart.js';
 import { chartDays } from '../../config/dummy-data';
-import SelectButton from '../SelectButton';
+// import SelectButton from '../SelectButton';
+import SelectButton from '../Selectbutton/SelectButton';
 import './coininfo.css';
 
 Chart.register(...registerables);

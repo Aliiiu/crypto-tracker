@@ -34,7 +34,7 @@ const Header = () => {
 				<Container>
 					<Toolbar>
 						<Typography onClick={() => history('/')} className='title'>
-							Crypto Hunter
+							Crypto Tracker
 						</Typography>
 						{/* <InputLabel id='select-id-label'>Currency</InputLabel> */}
 						<Select
